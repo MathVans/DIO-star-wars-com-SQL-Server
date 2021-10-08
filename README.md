@@ -57,7 +57,7 @@ GO
 
 -- ===================== PILOTOS NAVES =====================
 
-
+ 
 CREATE TABLE PilotosNaves(
 	IdPiloto int NOT NULL,
 	IdNave int NOT NULL,
