@@ -1,4 +1,4 @@
---  # DIO-star-wars-com-SQL-Server
+--# DIO-star-wars-com-SQL-Server
 --Código para criação do BD para Gerenciamento das Naves
 -- USE EstrelaDaMorte
 
@@ -19,7 +19,8 @@ GO
 ALTER TABLE Planetas ADD CONSTRAINT PK_Planetas PRIMARY KEY (IdPlaneta);
 GO
 
--- ===================== NAVES =====================
+
+--===================== NAVES =====================
 
 
 CREATE TABLE Naves(
@@ -33,7 +34,9 @@ CREATE TABLE Naves(
 GO
 ALTER TABLE Naves ADD CONSTRAINT PK_Naves PRIMARY KEY (IdNave);
 GO
--- ===================== PILOTOS =====================
+
+
+--===================== PILOTOS =====================
 
 
 CREATE TABLE Pilotos(
@@ -50,6 +53,7 @@ REFERENCES Planetas (IdPlaneta)
 GO
 ALTER TABLE Pilotos CHECK CONSTRAINT FK_Pilotos_Planetas
 GO
+
 
 -- ===================== PILOTOS NAVES =====================
 
@@ -71,7 +75,8 @@ GO
 ALTER TABLE PilotosNaves  ADD CONSTRAINT DF_PilotosNaves_FlagAutorizado  DEFAULT (1) FOR FlagAutorizado
 GO
 
--- ===================== HISTÓRICO DE VIAGENS =====================
+
+--===================== HISTÓRICO DE VIAGENS =====================
 
 
 CREATE TABLE HistoricoViagens(
@@ -88,4 +93,6 @@ GO
 
 ALTER TABLE HistoricoViagens CHECK CONSTRAINT FK_HistoricoViagens_PilotosNaves
 GO
+
+
 --==============================================================================================================================
